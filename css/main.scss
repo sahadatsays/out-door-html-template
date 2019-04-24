@@ -1,13 +1,6 @@
-/* 
-    COLORS
-    - Light Green: #7ED56F
-    - Medium green : #55C57A
-    - Dark Green : #28B485
-*/
-$lightGreen : #7ed56f;
-$mediumGreen: #55C57A;
-$darkGreen: #28B485;
-
+@import '_variables';
+@import '_animation';
+@import '_buttons';
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +25,7 @@ body {
     // clip-path: polygon(x y, x y, x y);
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     position: relative;
+    backface-visibility: hidden;
 
     .logo-box {
         position: absolute;
@@ -42,4 +36,34 @@ body {
     .logo {
         height: 35px;
     }
+
+    .text-box {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        .heading-primary {
+            color: $white;
+            margin-bottom: 60px;
+    
+            .heading-primary-main {
+                display: block;
+                font-size: 60px;
+                text-transform: uppercase;
+                letter-spacing: 35px;
+                font-weight: 400;
+                animation: moveRight 2s ease-out;
+            }
+            .heading-primary-sub {
+                display: block;
+                text-transform: uppercase;
+                font-size: 20px;
+                letter-spacing: 16.5px;
+                font-weight: 400;
+                animation: moveLeft 2s ease-out;
+            }
+        }
+    }
 }
+
