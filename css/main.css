@@ -119,8 +119,6 @@
   transition: all 0.2s ease-in-out;
   position: relative;
   letter-spacing: 2px;
-  -webkit-animation: moveBottom 2s ease-in-out;
-          animation: moveBottom 2s ease-in-out;
 }
 
 .btn:hover {
@@ -164,6 +162,13 @@
   -webkit-transform: scale(1.1) scale(1.4);
           transform: scale(1.1) scale(1.4);
   opacity: 0;
+}
+
+.btn-animated {
+  -webkit-animation: moveBottom 2s ease-out 0.75s;
+          animation: moveBottom 2s ease-out 0.75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 * {
